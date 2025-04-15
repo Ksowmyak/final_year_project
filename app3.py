@@ -111,7 +111,7 @@ elif choice == "Predict" and st.session_state.logged_in:
             scaled_input = scaler.transform(input_array)
 
             if model_choice == "ANN (LSTM)":
-                lstm_model = load_model("lstm_model.h5")
+                lstm_model = load_model("ann_model.h5")
                 lstm_input = scaled_input.reshape((1, 1, scaled_input.shape[1]))
                 prob = lstm_model.predict(lstm_input)[0][0]
 
